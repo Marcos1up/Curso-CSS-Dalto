@@ -24,4 +24,20 @@ button:hover {
   color: red;
 }
 
-/* ------------------------tipos de fuente------------------------- */
+/* ------------------------tipos de fuente y medidas------------------------- */
+
+.contact-form {
+  font-size: 20px;
+}
+
+.contact-form__h2 {
+  font-size: 5em;
+  font-family: "Franklin Gothic Medium", "Arial Narrow";
+}
+
+.box-class {
+  background-color: black;
+  color: white;
+  width: 50vw;
+  height: 100vh;
+}

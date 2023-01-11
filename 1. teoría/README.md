@@ -20,7 +20,7 @@ Selecciona todos los elementos dentro del body del html.
 
 ```bash
 * {
-    color: red;
+  color: red;
 }
 ```
 
@@ -30,7 +30,7 @@ Son los que seleciconamos por el nombre del elemento `(h1 - button - input - p -
 
 ```bash
 h1 {
-    color: red;
+  color: red;
 }
 ```
 
@@ -40,7 +40,7 @@ Debemos agregar el atributo `class="algo"`, a las etiquetas específica que quer
 
 ```bash
 .algo {
-color: red;
+  color: red;
 }
 ```
 
@@ -52,7 +52,7 @@ El selector de ID está destinada para elementos únicos, y debe especificarse e
 
 ```bash
 #element{
-    color: red;
+  color: red;
 }
 ```
 
@@ -65,7 +65,7 @@ De la misma forma que con tipos, utilizamos atributos propios y los seleccionamo
 
 ```bash
 [rancio="epico"]{
-    color: red;
+  color: red;
 }
 ```
 
@@ -83,7 +83,7 @@ Es una forma de modifgicar una etiqueta (hijo) que se encuentra dentro de otra (
 
 ```bash
 h2 p {
-    color: red;
+  color: red;
 }
 ```
 
@@ -93,7 +93,7 @@ h2 p {
 
 ```bash
 p:hover {
-color: red;
+  color: red;
 }
 ```
 
@@ -134,7 +134,7 @@ color: red;
 
 ```bash
 h1{
-color : grey !important
+  color : grey !important
 }
 ```
 
@@ -167,7 +167,7 @@ Nos basamos en las clases para saber el elemento específico que estamos selecci
 
 ```bash
 .contact-form__input:first-child {
-color: red;
+  color: red;
 }
 ```
 
@@ -177,7 +177,7 @@ Otra forma es gregando `--"loquesea"` y los `--` indicará su `sub-clase` partic
 
 ```bash
 .contact-form__input--active {
-color: red;
+  color: red;
 }
 ```
 
@@ -202,31 +202,61 @@ color: red;
 
 ```bash
 ---fijas: px, cm, mm ,etc
-```
 
-```bash
 ---relativas: rem, em.
 ```
 
-> REM tiene como referencia el root.
-> Por defecto(se la da el navegador) `1em = 16px`. Sino la clase o caja contenedora establece la equivalencia.
-> Sirve para cualquier propiedad que trabaje con unidad de medida.
+REM tiene como referencia el root.
+Por defecto(se la da el navegador) `1em = 16px`. Sino la clase o caja contenedora, o bien la etiqueta padre, establece la equivalencia, y todo funcionará con herencia.
+Sirve para cualquier propiedad que trabaje con unidad de medida.
 
 ```bash
 .contact-form{
-font-size: 20px;
+  font-size: 20px;
 }
 ```
 
 ```bash
 .contact-form__h2 {
-font-size: 5em;
+  font-size: 5em;
 }
 ```
 
-> En este caso 1em = 20px -> 5em = 100px
+> En este caso, la etiqueta padre establece el valor de `1em = 20px`, por lo cual sus hijos van a heredar dicho valor. En este caso: `5em = 100px`
 
-`View-port` - Estas medidas ocupan todo el ancho de la pantalla
+-`View-port` - Estas medidas ocupan todo el ancho de la pantalla
 
 - vw -> view port width. with: `100vw`
 - vh -> view port heigth. height: `50vh`
+
+Ejemplo:
+
+```bash
+.box {
+  background-color: black;
+  width: 50vw;
+  height: 100vh;
+}
+```
+
+<hr size="2px" color="black" />
+
+# Propiedades de texto
+
+Las propiedades de texto son sumamente importantes, y podemos modificarlas de diferentes maneras, tanto como el alto, el ancho, la tipograía, el grosor de la tipografía, etc.
+
+```bash
+font-size : 2em;
+font-family : tipografia;
+line-height : 1.9; -----> espacio total que ocupa
+font-weight: 100; -----> Es el grosor
+```
+
+> Inutiles:
+
+- font-stretch: normal;
+- font-variant: small-caps;
+
+## Tipografías externas:
+
+Son tipografías que deben ser exportadas directamente desde `Google Fonts`, el cual nhos brindará una grtan variedad de tipografias. Seleccionamos la que nos gusta, y posteriormente nos brindará uhna linea de codigo a pegar en el `Head` de nuestro `index.html`
