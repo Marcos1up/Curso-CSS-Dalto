@@ -1,0 +1,27 @@
+/* ------------------------tipos de selectores------------------------- */
+
+h2 {
+  color: red;
+}
+
+.h2-class {
+  color: blue;
+}
+
+p {
+  color: black;
+}
+
+#id-especifica {
+  color: darkgreen;
+}
+
+button:hover {
+  color: blue;
+}
+
+[select="select"]:hover {
+  color: red;
+}
+
+/* ------------------------tipos de fuente------------------------- */
