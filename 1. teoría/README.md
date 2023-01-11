@@ -14,9 +14,9 @@
 
 <hr size="2px" color="black" />
 
-## Selectores:
+# Selectores:
 
-### Universal " \* ":
+## Universal " \* ":
 
 Selecciona todos los elementos dentro del body del html.
 
@@ -26,7 +26,7 @@ Selecciona todos los elementos dentro del body del html.
 }
 ```
 
-### De tipo:
+## De tipo:
 
 Son los que seleciconamos por el nombre del elemento `(h1 - button - input - p - etc)`
 
@@ -36,7 +36,7 @@ h1 {
 }
 ```
 
-### clases " . ":
+## clases " . ":
 
 Debemos agregar el atributo `class="algo"`, a las etiquetas específica que queremos estilizar.
 
@@ -48,7 +48,7 @@ color: red;
 
 > Es importante agregar al punto `.` antes del nombre de la clase, para que pueda detectarlo como tal.
 
-### ID " # ":
+## ID " # ":
 
 El selector de ID está destinada para elementos únicos, y debe especificarse en dicho elemento como atributo. `id="element"`
 
@@ -60,7 +60,7 @@ El selector de ID está destinada para elementos únicos, y debe especificarse e
 
 > Es importante agregar al Hash `#` antes del nombre de la Id, para que pueda detectarlo como tal.
 
-### Por atributo:
+## Por atributo:
 
 De la misma forma que con tipos, utilizamos atributos propios y los seleccionamos
 `rancio="epico"`
@@ -73,7 +73,7 @@ De la misma forma que con tipos, utilizamos atributos propios y los seleccionamo
 
 > Es importante envolver el atributo con los corchetes `[]` para que pueda detectarlo como tal.
 
-### Descendiente:
+## Descendiente:
 
 Es una forma de modifgicar una etiqueta (hijo) que se encuentra dentro de otra (padre)
 
@@ -91,7 +91,7 @@ h2 p {
 
 > En este caso solo modifica a los p que estan dentro de un h2
 
-### pseudo-clases:
+## pseudo-clases:
 
 ```bash
 p:hover {
@@ -105,7 +105,7 @@ color: red;
 
 <hr size="2px" color="black" />
 
-## Especificidad:
+# Especificidad:
 
 > Ordenado de mayor a menor en importancia.
 
