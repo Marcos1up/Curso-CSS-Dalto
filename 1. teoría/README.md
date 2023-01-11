@@ -12,8 +12,6 @@
 - Descendiente
 - Pseudo-clases
 
-<hr size="2px" color="black" />
-
 # Selectores:
 
 ## Universal " \* ":
@@ -143,3 +141,92 @@ color : grey !important
 `(puede usarse en html para los requerimientos obligatorios de campo, como por ejemplo, un imput)`
 
 <hr size="2px" color="black" />
+
+# METODOLOGIA BEM
+
+Nos basamos en las clases para saber el elemento específico que estamos seleccionando
+
+```bash
+<div class="contact-form">
+   <input type="text" class="contact-form__input">
+   <input type="password" class="contact-form__input">
+</div>
+```
+
+- Ejemplo si solo quiero modificar el primero:
+
+```bash
+<div class="contact-form">
+   <input type="text" class="contact-form__input--active" >
+   <input type="text" class="contact-form__input">
+   <input type="text" class="contact-form__input">
+   <input type="text" class="contact-form__input">
+   <input type="password" class="contact-form__input">
+</div>
+```
+
+```bash
+.contact-form__input:first-child {
+color: red;
+}
+```
+
+> Es importante tener en cuenta que, para aplicar la metodología BEM, despues de colocar el nombre del bloque, los dobles guiones bajos `__` sumado al nombre de la clase, la seleccion de éstos es mucho más fácil e intuitivo dentro del codigo de css.
+
+Otra forma es gregando `--"loquesea"` y los `--` indicará su `sub-clase` particular, a diferencia del ejemplo anterior, que usaba los dos puntos `contact-form__input:active`
+
+```bash
+.contact-form__input--active {
+color: red;
+}
+```
+
+- OTRO Ejemplo:
+
+```bash
+<div class="contact-form">
+  <p> class="contact-form__p">
+    <h2 class="contact-form__p-h2"></h2>
+  </p>
+</div>
+```
+
+<hr size="2px" color="black" />
+
+# Unidades
+
+- Relativas(variables)
+- Fijas
+
+> `Estas unidades de medida, serán las encargadas de convertir nuestas fuentes de texto, en fuentes de texto responsive.`
+
+```bash
+---fijas: px, cm, mm ,etc
+```
+
+```bash
+---relativas: rem, em.
+```
+
+> REM tiene como referencia el root.
+> Por defecto(se la da el navegador) `1em = 16px`. Sino la clase o caja contenedora establece la equivalencia.
+> Sirve para cualquier propiedad que trabaje con unidad de medida.
+
+```bash
+.contact-form{
+font-size: 20px;
+}
+```
+
+```bash
+.contact-form__h2 {
+font-size: 5em;
+}
+```
+
+> En este caso 1em = 20px -> 5em = 100px
+
+`View-port` - Estas medidas ocupan todo el ancho de la pantalla
+
+- vw -> view port width. with: `100vw`
+- vh -> view port heigth. height: `50vh`
