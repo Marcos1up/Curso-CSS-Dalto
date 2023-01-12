@@ -1,0 +1,44 @@
+div {
+    display: block;
+    background: lightblue;
+    position: absolute;
+}
+
+div div {
+    height: 100px;
+    width: 100px;
+    background: yellow;
+}
+
+.contenedor {
+    position: relative;
+    border: 4px solid red;
+    margin: 50px auto;
+    height: 500px;
+    width: 500px;
+}
+
+.caja1 {
+    left: 0;
+}
+
+.caja2 {
+    right: 0;
+    top: 0;
+}
+
+.caja3 {
+    bottom: 0;
+}
+
+.caja4 {
+    right: 0;
+    bottom: 0;
+}
+.caja5 {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
