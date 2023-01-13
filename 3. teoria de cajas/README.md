@@ -133,3 +133,67 @@ FLOAT : LEFT, RIGHT, NONE, INHERIT
 Lo podemos usar para que el texto en un div envuelva a una imagen. right y left es el mismo efecto.
 
 <hr size="2px" color="black" />
+
+# PSEUDO-ELEMENTOS
+
+Es un "elemento que no es un elemento", no forman parte del DOM pero si
+podemos ver cambios visuales. Por eso se llaman `pseudo-elementos`.
+
+-   `::first-line` | BLOCK: solo funciona en los elementos de bloque, en inline no.
+    para cambiar propiedades de la primer linea de un texto.
+
+-   `::first-letter` | BLOCK:
+    igual que el anterior, pero solo con la primer letra.
+
+-   `::placeholder`:
+    sirve para cambiar las propiedades del placeholder del HTML
+
+-   `::selection`:
+    es para cambiar las propiedades de la seleccion ( por ejemplo: cuando seleccioanmos una
+    parte de un texto )
+
+-   `::after` | "HIJOS" - CONTENT (NECESARIO) - INLINE
+-   `::before` | "HIJOS" - CONTENT (NECESARIO) - INLINE
+    Son hijos del elemento al que se le aplica.
+    se pueden hacer figuras, iconos basicos
+
+```bash
+p::after/before {
+content:"texto de ejemplo";
+}
+```
+
+<hr size="2px" color="black" />
+
+-------------------------------------------------PSEUDO-CLASES
+
+# PSEUDO-CLASES
+
+Sirven para escuchar los eventos que ocurren dentro del elemento en cuestion.
+
+-   `:Hover`:
+    Escuchar el evento cuando el mouse esta encima
+
+-   `:link`:
+-   `:visited`:
+-   `:active`:
+    Al dejar apretado un boton cambia los estilos, si dejamos de apretar no se mantiene
+    se les puede aplicar transiciones, si lo suelto la transicion no se completa.
+
+-   `:focus`:
+    se aplica mas a los imputs, y es cuando esta el elemento en foco.
+    se puede usar como el active, pero se mantiene mientras este enfocado.
+
+-   `:lang`:
+    es una funcion, `b:lang(es)` (espanish, english, etc) detecta por lenguaje
+    pero hay que darle la propiedad a la etiqueta
+
+```bash
+<b lang="es"> hellow how are you como estas </b>
+
+b:lang(es) {
+background: red
+}
+
+(Se pintará de rojo lo que esta en español)
+```
