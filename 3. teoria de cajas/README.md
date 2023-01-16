@@ -165,8 +165,6 @@ content:"texto de ejemplo";
 
 <hr size="2px" color="black" />
 
--------------------------------------------------PSEUDO-CLASES
-
 # PSEUDO-CLASES
 
 Sirven para escuchar los eventos que ocurren dentro del elemento en cuestion.
@@ -197,3 +195,28 @@ background: red
 
 (Se pintará de rojo lo que esta en español)
 ```
+
+<hr size="2px" color="black" />
+
+# OBJECT-FIT
+
+Es una propiedad que se aplica mas que nada a las imagenes fill
+
+-   `contain`: la imagen mantiene las resoluciones ajustandose al contenedor (la imagen completa)
+-   `cover`: la imagen se ajusta al contenedor y recorta los bordes sobrantes
+-   `None`: pone las resoluciones originales
+-   `scale-down`: se queda con la mejor propiedad (none, contain). se queda con la mas chica.
+
+OBJECT-POSITION
+se puede aplicar en conjunto con `objet-fit`, para el valor `cover` en imagenes por ejemplo
+es una propiedad con los `valores: top, bottom, right, left`
+
+<hr size="2px" color="black" />
+
+# CURSOR
+
+es una propiedad que nos permite cambiar el cursor cuando esta encima de un elemento
+se puede combinar con `:active` por ejemplo
+
+> lista de cursores: lista de valores de cursor css (en google y fue)
+> https://www.w3schools.com/cssref/pr_class_cursor.php
