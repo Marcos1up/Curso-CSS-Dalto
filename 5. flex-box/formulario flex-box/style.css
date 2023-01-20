@@ -1,0 +1,59 @@
+* {
+    font-weight: 100;
+    color: #fff;
+}
+
+.flex-container {
+    display: flex; /* lo primero que hay que hacer */
+    flex-wrap: wrap; /* para que sea responsive */
+    align-items: center;
+    justify-content: center;
+    background: #444;
+    margin: 50px 50px;
+}
+
+.form {
+    min-width: 400px; /* establecer un minimo de ancho como responsive */
+    flex: 1; /* es para abreviar parámetros como el "margin" (flex-grow, flex-shrink, flex-basis) */
+    text-align: center;
+    padding: 40px;
+}
+
+.form__input {
+    width: 100%; /* los input ocuparan el 100% del espacio de la clase "form" */
+    padding: 6px;
+    margin: 6px 0px;
+    border: none;
+    border-bottom: 3px solid darkorange;
+    background: transparent;
+}
+
+.form__input:focus {
+    /* la seleccion de la cajita */
+    background: linear-gradient(to bottom, transparent, #333);
+    /* es una funcion de css, que genera un efecto muy bueno */
+    outline: none; /* bordes azules de la cajita */
+    border-bottom: 3px solid darkgoldenrod;
+}
+
+.form textarea {
+    min-height: 120px; /* altura del textarea */
+    resize: none;
+}
+
+.form-img {
+    display: flex;
+    flex: 1;
+    padding: 10px;
+}
+
+.img-container {
+    padding: 20px;
+    margin: auto; /* centrar */
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.form-img img {
+    width: 100%;
+}

@@ -1,0 +1,23 @@
+* {
+    font-weight: 100;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+}
+
+.flex-item {
+    background-color: #248;
+    margin: 5px;
+    height: 120px;
+    width: 120px;
+}
+
+.orange {
+    background-color: orange;
+}
+
+.green {
+    background-color: green;
+}
