@@ -1,6 +1,9 @@
 * {
     font-weight: 100;
-    color: #fff;
+}
+
+body {
+    background-color: #000;
 }
 
 .flex-container {
@@ -9,7 +12,8 @@
     align-items: center;
     justify-content: center;
     background: #444;
-    margin: 50px 50px;
+    margin: 80px 80px;
+    padding: 0px;
 }
 
 .form {
@@ -17,6 +21,7 @@
     flex: 1; /* es para abreviar parámetros como el "margin" (flex-grow, flex-shrink, flex-basis) */
     text-align: center;
     padding: 40px;
+    order: 5; /* es para dar orden de prioridad para cuando sea responsive */
 }
 
 .form__input {
@@ -26,6 +31,8 @@
     border: none;
     border-bottom: 3px solid darkorange;
     background: transparent;
+    color: #fff;
+    order: 2; /* es para dar orden de prioridad para cuando sea responsive */
 }
 
 .form__input:focus {
@@ -45,6 +52,9 @@
     display: flex;
     flex: 1;
     padding: 10px;
+    min-width: 200px; /* para que no se encoja la imagen cuando sea responsive */
+    max-width: 300px;
+    order: 1; /* es para dar orden de prioridad para cuando sea responsive */
 }
 
 .img-container {
@@ -56,4 +66,17 @@
 
 .form-img img {
     width: 100%;
+}
+
+.form__input[type="submit"] {
+    /* esto es un llamado por atributo. NO ES RECOMENDABLE HACERLO */
+    background-color: darkorange;
+    border-bottom: none;
+    padding: 12px;
+}
+
+.form__input[type="submit"]:hover {
+    background-color: darkgoldenrod;
+    border-bottom: none;
+    padding: 12px;
 }
