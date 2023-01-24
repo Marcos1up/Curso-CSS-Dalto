@@ -14,6 +14,11 @@ body {
     background: #444;
     margin: 80px 80px;
     padding: 0px;
+
+    /* que no se estire de mas en pantallas largas */
+    max-width: 1000px;
+    margin: 100px auto;
+    flex-grow: 1;
 }
 
 .form {
